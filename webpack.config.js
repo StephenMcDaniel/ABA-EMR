@@ -5,6 +5,8 @@ const OUT_DIR = path.join(__dirname, 'public');
 
 module.exports = {
   entry: path.join(SRC_DIR, 'index.jsx'),
+  watch: true,
+  cache: false,
   output: {
     path: OUT_DIR,
     filename: 'bundle.js'
@@ -15,7 +17,11 @@ module.exports = {
         test:/\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ]
   },
   mode: 'development',
