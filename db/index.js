@@ -1,7 +1,6 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
-//implement dotenv
-//ASSIGN URI
-const uri = 'mongodb://localhost/URI GOES HERE';
 //ASSIGN OPTIONS
 const options = {};
-mongoose.connect( uri, options);
+//Add options and callback that verifies connection through console.log
+mongoose.connect( process.env.URI );
