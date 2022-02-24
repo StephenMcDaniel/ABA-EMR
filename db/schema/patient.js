@@ -30,6 +30,9 @@ let patientSchema = new Schema({
     type: String,
     required: true
   },
+  insuranceSecondary: {
+    type: String
+  }
   pnok: {
     type: String,
     required: true
