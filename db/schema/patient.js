@@ -26,13 +26,24 @@ let patientSchema = new Schema({
     type: Number,
     required: true
   },
-  pendingServices: [{
+  insurance: {
     type: String,
     required: true
-  }],
-  authorizedServices: [{
-    type: String
-  }]
+  },
+  pnok: {
+    type: String,
+    required: true
+  },
+  pnokPhone: {
+    type: String,
+    required: true
+  }
+  snok: {
+    type: String,
+  },
+  snokPhone: {
+    type: String,
+  }
 });
 
 const Patient = mongoose.model("Patient", patientSchema);
