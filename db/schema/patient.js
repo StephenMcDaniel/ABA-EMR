@@ -35,26 +35,6 @@ let patientSchema = new Schema({
   }]
 });
 
-
-let cptSchema = new Schema({
-  procedureName: {
-    type: String,
-    unique: true,
-    required: true,
-    index: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  CPTCode: {
-    type: String,
-    unique: true,
-    required: true,
-    index: true
-  },
-});
-
 const Patient = mongoose.model("Patient", patientSchema);
 let save = (patientData) => {
     let patient = new Patient(patientData);
