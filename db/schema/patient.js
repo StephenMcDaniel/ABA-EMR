@@ -36,9 +36,16 @@ let patientSchema = new Schema({
 });
 
 const Patient = mongoose.model("Patient", patientSchema);
+//Add Patient
 let save = (patientData) => {
-    let patient = new Patient(patientData);
-    return Patient.save();
-  };
+  let patient = new Patient(patientData);
+  return Patient.save();
+};
+
+//Find Patient
+let findPatient = (input) => {
+  return Patient.find(input);
+};
 
 exports.savePatient = save;
+exports.findPatient = findPatient;
