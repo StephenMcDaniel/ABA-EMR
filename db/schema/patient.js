@@ -18,6 +18,10 @@ let patientSchema = new Schema({
     type: Date,
     required: true
   },
+  gender: {
+    type: String,
+    required: true
+  },
   address: {
     type: String,
     required: true
