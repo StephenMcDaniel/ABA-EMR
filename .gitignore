@@ -3,3 +3,5 @@ build
 
 .env
 patient_MOCK_DATA.csv
+
+.DS_Store
