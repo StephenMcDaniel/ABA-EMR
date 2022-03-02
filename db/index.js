@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 //ASSIGN OPTIONS
-const options = { useNewUrlParser: true };
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
 //Add options and callback that verifies connection through console.log
 const db = mongoose.connect( process.env.URI, options);
 

@@ -1,4 +1,5 @@
 let mongoose = require('mongoose');
+// mongoose.Promise = require('bluebird');
 let Schema = mongoose.Schema;
 
 let patientSchema = new Schema({
@@ -14,8 +15,8 @@ let patientSchema = new Schema({
   preferredName: {
     type: String
   },
-  DOB: {
-    type: Date,
+  dob: {
+    type: String,
     required: true
   },
   gender: {
@@ -62,7 +63,7 @@ let save = (patientData) => {
 
 //Find Patient
 let findPatient = (input) => {
-  return Patient.find({});
+  return Patient.find(input);
 };
 
 module.exports.savePatient = save;

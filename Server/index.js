@@ -13,7 +13,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.json());
 
 app.get('/patients', (req, res) => {
-  findPatient({})
+  // console.log('findPatient', findPatient);
+  findPatient({lastName: 'Bulbeck'})
     .then(result => {
       console.log('result', result);
       res.send(result);
