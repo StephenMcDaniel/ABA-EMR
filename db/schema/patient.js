@@ -44,7 +44,7 @@ let patientSchema = new Schema({
   pnokPhone: {
     type: String,
     required: true
-  }
+  },
   snok: {
     type: String,
   },
@@ -62,8 +62,8 @@ let save = (patientData) => {
 
 //Find Patient
 let findPatient = (input) => {
-  return Patient.find(input);
+  return Patient.find({});
 };
 
-exports.savePatient = save;
-exports.findPatient = findPatient;
+module.exports.savePatient = save;
+module.exports.findPatient = findPatient;
