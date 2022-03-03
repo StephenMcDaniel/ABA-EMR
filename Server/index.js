@@ -14,7 +14,9 @@ app.use(express.json());
 
 app.get('/patients', (req, res) => {
   // console.log('findPatient', findPatient);
-  findPatient({lastName: 'Bulbeck'})
+  let query = req.query;
+  console.log('query', query);
+  findPatient(query)
     .then(result => {
       console.log('result', result);
       res.send(result);
