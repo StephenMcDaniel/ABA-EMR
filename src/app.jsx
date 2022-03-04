@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "bootstrap";
+import Navbar from "./component/navbar.jsx";
+import PTFinder from "./component/offcanvas/ptFinder.jsx";
 
 const App = () => {
   return (
@@ -8,6 +10,7 @@ const App = () => {
         <div className="text-center border container rounded my-2">
           <h1>ABA</h1>
         </div>
+        <Navbar />
         <div className="text-center align-middle container border rounded my-2">
           <div>Patient information placeholder!</div>
           <h3>THIS IS A TEST</h3>
@@ -30,6 +33,7 @@ const App = () => {
           </figcaption>
         </figure>
       </div>
+      <PTFinder />
     </>
   );
 };
